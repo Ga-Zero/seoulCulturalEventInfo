@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="common.js" defer></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <main>
+        <div class="con">
+          <h1><img src="./img/logo.png" alt="" />서울 문화행사 정보</h1>
+          <button class="bar"><i class="fa-solid fa-bars"></i></button>
+        </div>
+        <nav id="gnb">
+          <div class="top-buttons">
+            <button data-cate="%20">
+              <img src="./img/fireworks.png" alt="" />
+              <p>전체</p>
+            </button>
+            <button data-cate="뮤지컬">
+              <img src="./img/opera.png" alt="" />
+              <p>뮤지컬/오페라</p>
+            </button>
+            <button data-cate="클래식">
+              <img src="./img/conductor.png" alt="" />
+              <p>클래식</p>
+            </button>
+            <button data-cate="전시">
+              <img src="./img/art.png" alt="" />
+              <p>전시/미술</p>
+            </button>
+            <button data-cate="국악">
+              <img src="./img/inst.png" alt="" />
+              <p>국악</p>
+            </button>
+            <button data-cate="무용">
+              <img src="./img/ballet.png" alt="" />
+              <p>무용</p>
+            </button>
+          </div>
+          <div class="bottom-buttons">
+            <button data-cate="연극">
+              <img src="./img/theater.png" alt="" />
+              <p>연극</p>
+            </button>
+            <button data-cate="콘서트">
+              <img src="./img/concert.png" alt="" />
+              <p>콘서트</p>
+            </button>
+            <button data-cate="교육">
+              <img src="./img/training.png" alt="" />
+              <p>교육/체험</p>
+            </button>
+            <button data-cate="축제">
+              <img src="./img/festival.png" alt="" />
+              <p>축제</p>
+            </button>
+            <button data-cate="기타">
+              <img src="./img/any.png" alt="" />
+              <p>기타</p>
+            </button>
+          </div>
+        </nav>
+        <div class="opt">
+          <div class="optDiv">
+            <select id="filterSelect">
+              <option value="title">공연/행사명</option>
+              <option value="date">날짜</option>
+            </select>
+          </div>
+          <div class="inputText inputData">
+            <input type="text" />
+            <button class="textBtn">검색</button>
+          </div>
+          <div class="inputDate inputData">
+            <input type="date" />
+            <button class="dateBtn">검색</button>
+          </div>
+        </div>
+        <div class="loader"></div>
+        <ul class="listCon" id="listCon">
+          <!-- <li>
+            <div class="listImg"><img src="./img/getImage.jpeg" alt="" /></div>
+            <p class="title">제목</p>
+            <p class="place">장소</p>
+            <p class="listDate">날짜 시작-종료일</p>
+            <a class="more" href="">자세히보기</a>
+          </li> -->
+        </ul>
+        <div class="modal hidden">
+          <div class="modalContent">
+            <!-- <p>제목</p>
+            <p>구, 장소</p>
+            <p>이용연령</p>
+            <p>이용요금</p>
+            <p>시작날짜-종료날짜</p> -->
+          </div>
+        </div>
+        <div class="pgCon">
+          <!-- <button class="prev"><i class="fa-solid fa-angles-left"></i></button>
+          <button class="prev"><i class="fa-solid fa-angle-left"></i></button>
+          <button class="on">1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>4</button>
+          <button class="next"><i class="fa-solid fa-angle-right"></i></button>
+          <button class="nextGroup">
+            <i class="fa-solid fa-angles-right"></i>
+          </button> -->
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

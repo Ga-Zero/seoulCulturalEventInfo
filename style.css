@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+main {
+  max-width: 1200px;
+  width: calc(100% - 4rem);
+  margin: auto;
+}
+main > * {
+  margin-bottom: 4em;
+}
+.con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4em;
+  gap: 1rem;
+}
+h1 {
+  display: flex;
+  width: 100%;
+  color: #ee6352;
+}
+h1 > img {
+  display: none;
+}
+.bar {
+  font-size: 1.7rem;
+  color: rgb(105, 105, 105);
+}
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.loader {
+  z-index: 10;
+  margin: 5% auto;
+  height: 100px;
+  width: 100px;
+  border: 6px solid #fff;
+  border-right-color: #ee6352;
+  border-top-color: #ee6352;
+  border-radius: 100%;
+  animation: spin 800ms infinite linear;
+  background-color: white;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+@media (max-width: 999px) {
+  nav {
+    display: none;
+  }
+  nav.on {
+    display: block;
+  }
+  nav button img {
+    display: none;
+  }
+  nav button.on {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+  }
+  h1 > img {
+    display: block;
+    width: calc(10%);
+  }
+  .bar {
+    display: none;
+  }
+  .listCon {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 1rem;
+    gap: 0 1.8rem;
+  }
+
+  nav {
+    display: grid;
+    justify-content: center;
+  }
+  nav button {
+    padding: 1.5em;
+  }
+  .top-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .bottom-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav button img {
+    display: inline-block;
+    width: 6rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  }
+
+  nav button p {
+    margin: 6px 0 0;
+  }
+  nav button:hover {
+    color: #ee6352;
+    font-weight: bold;
+  }
+  nav button:hover img {
+    transition: 0.3s;
+    scale: 1.1;
+    background-color: rgba(255, 233, 219, 0.671);
+  }
+  nav button.selected {
+    font-weight: bold;
+    color: #ee6352;
+  }
+  nav button img.selected {
+    transition: 0.3s;
+    border: 1px solid #ee6352;
+  }
+}
+.opt {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.optDiv select,
+.inputData input {
+  display: flex;
+  border: none;
+  outline: none;
+  height: 2.5rem;
+  font-size: 1rem;
+  flex: 1;
+}
+.inputData {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.optDiv,
+.inputData {
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  overflow: hidden;
+  padding: 4px 1rem;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+.inputDate {
+  display: none;
+}
+@media (max-width: 501px) {
+  h1 {
+    font-size: x-large;
+  }
+  .opt {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+  }
+  .inputData {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .inputDate {
+    display: none;
+  }
+}
+.listCon > li {
+  cursor: pointer;
+  background-color: rgb(242, 242, 242);
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 0 0 1rem 0;
+  gap: 6px;
+  margin: 0 0 2rem 0;
+}
+.listCon > li > div {
+  width: 100%;
+}
+.listCon > li > p {
+  width: 100%;
+  padding: 5px 1rem;
+}
+.listCon .listImg {
+  position: relative;
+  padding-top: 150%;
+  border: 1px solid lightgray;
+  overflow: hidden;
+  margin-bottom: 0.5em;
+}
+.listCon img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+}
+.listCon li:hover img {
+  scale: 1.1;
+  transition: 0.5s;
+}
+.listCon .title {
+  font-size: 1.2em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+}
+
+.modalContent {
+  position: relative;
+}
+.modalContent p {
+  position: relative;
+  padding: 0 0 10px 0;
+}
+.modalContent .title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.modalClose {
+  font-size: 1.4em;
+  cursor: pointer;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+}
+.modalClose:hover {
+  color: gray;
+}
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+}
+.modalContent {
+  position: absolute;
+  background-color: #ffffff;
+  width: 80%;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.7);
+  font-size: large;
+}
+.modal.hidden {
+  display: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  color: #ee6352;
+}
+.link {
+  font-size: 1.2rem;
+}
+.pgCon {
+  display: flex;
+  justify-content: center;
+  gap: 0.25em;
+}
+.pgCon button {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+.pgCon button.on {
+  color: tomato;
+}
